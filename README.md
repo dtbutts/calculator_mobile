@@ -1,8 +1,11 @@
 Program #3
 
-Name:
-Cosc 5730 or 4730
+Name: Dawson Butts
 
-Description: (how to run the program, phone/emulator screen size, pixel 4a, etc)
+Cosc 4730
+
+Description: Run on Google Pixel 4a
+  The layout of the keyboard is inutitive with symbols for each operation.
 
 Anything that doesn't work:
+  Everything is working
