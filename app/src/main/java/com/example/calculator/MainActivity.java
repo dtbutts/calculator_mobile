@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     private String textDisplay = "";
     private String operation = "";
+        //flag to disallow hitting operator over and over
+        //as said in discord
+    private boolean doAnother = true;
 
 
     //number buttons
@@ -81,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(1);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(2);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -97,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(3);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -105,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(4);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -113,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(5);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -121,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(6);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -129,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(7);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -137,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(8);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -145,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(9);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -153,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + convertForStringInt(0);
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -161,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay = textDisplay + ".";
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
 
@@ -173,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 operation = "+";
                 display.setText(format(oldValue));
                 textDisplay = "";
+                doAnother = false;
             }
         });
 
@@ -183,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
                 operation = "-";
                 display.setText(format(oldValue));
                 textDisplay = "";
+                doAnother = false;
             }
         });
 
@@ -193,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 operation = "m";
                 display.setText(format(oldValue));
                 textDisplay = "";
+                doAnother = false;
             }
         });
 
@@ -203,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
                 operation = "d";
                 display.setText(format(oldValue));
                 textDisplay = "";
+                doAnother = false;
             }
         });
 
@@ -213,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
                 operation = "p";
                 display.setText(format(oldValue));
                 textDisplay = "";
+                doAnother = false;
             }
         });
 
@@ -223,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
                 //oldValue = 0.0;
                 operation = "";
                 textDisplay = "";
+                doAnother = false;
             }
         });
 
@@ -233,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
                 display.setText(format(oldValue));
                 textDisplay = format(oldValue);
                 operation = "";
+                doAnother = false;
             }
         });
 
@@ -249,13 +270,17 @@ public class MainActivity extends AppCompatActivity {
                     textDisplay = "-" + textDisplay;
                 }
                 display.setText(textDisplay);
+                doAnother = true;
             }
         });
     }
 
     //provides for the functionality of the calculator
     protected void calculate(){
-        if(!operation.equals("")) {
+        if(!doAnother){
+
+        }
+        else if(!operation.equals("")) {
            newValue = getNum();
            Log.v("DTB", String.valueOf(newValue));
 
@@ -272,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
            }else if(operation.equals("n")){
                //Do nothing, it was a negate call
            }
-       }else{
+        }else{
             oldValue = getNum();
         }
     }
