@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="113dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/firstRowGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="147dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/secondRowGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="229dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/thirdRowGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="312dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fourthRowGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="398dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifthRowGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="483dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftSideGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightSideGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleLeftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.47"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleRightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.53"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Number Display -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/textGuide"
+        app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- First Row Buttons -->
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="C"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
+
+    <Button
+        android:id="@+id/negate"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="-/+"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
+        app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
+
+    <Button
+        android:id="@+id/power"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="^"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
+        app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="x"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
+
+    <!-- Second Row Buttons -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="1"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="2"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
+        app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="3"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
+        app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="/"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
+
+    <!-- Third Row Buttons -->
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="4"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="5"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
+        app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="6"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
+        app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
+
+    <Button
+        android:id="@+id/addition"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="+"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
+
+    <!-- Fourth Row Buttons -->
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="7"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="8"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
+        app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="9"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
+        app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
+
+    <Button
+        android:id="@+id/subtraction"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="-"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
+
+    <!-- Fifth Row Buttons -->
+    <Button
+        android:id="@+id/decimal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="."
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
+        app:layout_constraintTop_toTopOf="@+id/fifthRowGuide" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="0"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
+        app:layout_constraintTop_toTopOf="@+id/fifthRowGuide" />
+
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:padding="15dp"
+        android:text="="
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
+        app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
+        app:layout_constraintTop_toTopOf="@+id/fifthRowGuide" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
