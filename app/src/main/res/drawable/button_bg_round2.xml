@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <stroke android:color="#C0C0C0" android:width="2dp" />
+            <solid android:color="#16b0c4"/>
+            <size android:width="50dp" android:height="50dp"/>
+        </shape>
+    </item>
+</selector>
+
+    <!--
+    Copper: b87333
+    Turqoise: 30D5C8
+    Silver: C0C0C0
+    -->

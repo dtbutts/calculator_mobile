@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/darkScreen">
 
     <!-- Guidelines -->
     <androidx.constraintlayout.widget.Guideline
@@ -91,13 +92,14 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="30dp"
+        android:textColor="@color/white"
 
         app:layout_constraintBottom_toTopOf="@+id/textGuide"
         app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- First Row Buttons -->
-    <Button
+    <android.widget.Button
         android:id="@+id/clear"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -108,7 +110,7 @@
         app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
         app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/negate"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -119,7 +121,7 @@
         app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
         app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/power"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -130,7 +132,7 @@
         app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
         app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/multiply"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -142,40 +144,40 @@
         app:layout_constraintTop_toTopOf="@+id/firstRowGuide" />
 
     <!-- Second Row Buttons -->
-    <Button
+    <android.widget.Button
         android:id="@+id/button1"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="1"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
         app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button2"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="2"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
         app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="3"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
         app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/divide"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -187,40 +189,40 @@
         app:layout_constraintTop_toTopOf="@+id/secondRowGuide" />
 
     <!-- Third Row Buttons -->
-    <Button
+    <android.widget.Button
         android:id="@+id/button4"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="4"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
         app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button5"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="5"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
         app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button6"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="6"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
         app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/addition"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -232,40 +234,40 @@
         app:layout_constraintTop_toTopOf="@+id/thirdRowGuide" />
 
     <!-- Fourth Row Buttons -->
-    <Button
+    <android.widget.Button
         android:id="@+id/button7"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="7"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
         app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button8"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="8"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
         app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button9"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="9"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
         app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/subtraction"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -277,35 +279,36 @@
         app:layout_constraintTop_toTopOf="@+id/fourthRowGuide" />
 
     <!-- Fifth Row Buttons -->
-    <Button
+    <android.widget.Button
         android:id="@+id/decimal"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="."
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/middleLeftGuide"
         app:layout_constraintTop_toTopOf="@+id/fifthRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button0"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/button_bg_round"
+        android:background="@drawable/button_bg_round2"
         android:padding="15dp"
         android:text="0"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/leftSideGuide"
         app:layout_constraintTop_toTopOf="@+id/fifthRowGuide" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/equals"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:padding="15dp"
         android:text="="
         android:textSize="25dp"
+        android:background="@color/operationColor"
         app:layout_constraintEnd_toStartOf="@+id/rightSideGuide"
         app:layout_constraintStart_toStartOf="@+id/middleRightGuide"
         app:layout_constraintTop_toTopOf="@+id/fifthRowGuide" />

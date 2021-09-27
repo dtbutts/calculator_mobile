@@ -1,15 +1,11 @@
 package com.example.calculator;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         decimal = findViewById(R.id.decimal);
 
         display = findViewById(R.id.display);
+
+
 
         //updates the button display
         num1.setOnClickListener(new View.OnClickListener() {
@@ -218,17 +216,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        neg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculate();
-                operation = "n";
-                oldValue = -oldValue;
-                display.setText(format(oldValue));
-                textDisplay = "";
-            }
-        });
-
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -244,15 +231,33 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calculate();
                 display.setText(format(oldValue));
-                textDisplay = "";
+                textDisplay = format(oldValue);
                 operation = "";
+            }
+        });
+
+        //negates the display
+        neg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //is more like the number buttons
+
+                //check if it is positive or negative
+                if(textDisplay.charAt(0) == '-'){
+                    textDisplay = textDisplay.substring(1);
+                }else {
+                    textDisplay = "-" + textDisplay;
+                }
+                display.setText(textDisplay);
             }
         });
     }
 
+    //provides for the functionality of the calculator
     protected void calculate(){
-       if(!operation.equals("")) {
+        if(!operation.equals("")) {
            newValue = getNum();
+           Log.v("DTB", String.valueOf(newValue));
 
            if (operation.equals("+")) {
                oldValue = oldValue + newValue;
@@ -264,28 +269,33 @@ public class MainActivity extends AppCompatActivity {
                oldValue = oldValue / newValue;
            } else if (operation.equals("p")) {
                oldValue = Math.pow(oldValue, newValue);
+           }else if(operation.equals("n")){
+               //Do nothing, it was a negate call
            }
        }else{
             oldValue = getNum();
         }
     }
 
+    //converts value of an int to a String for display
     protected String convertForStringInt(int input){
         return String.valueOf(input);
     }
 
-    protected String convertForStringDouble(double input){
-        return String.valueOf(input);
-    }
+//    protected String convertForStringDouble(double input){
+//        return String.valueOf(input);
+//    }
+//
+//    protected  double convertForDub(String input){
+//        return Double.parseDouble(input);
+//    }
 
-    protected  double convertForDub(String input){
-        return Double.parseDouble(input);
-    }
-
+    //parses the number from the display
     protected Double getNum(){
         return Double.parseDouble(String.valueOf(display.getText()));
     }
 
+    //removes trailing zeros from the double and makes it a string
     protected String format(double input){
         if(input == (long) input){
             return String.format("%d", (long) input);
