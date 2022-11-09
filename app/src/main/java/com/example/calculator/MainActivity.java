@@ -183,55 +183,67 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
-                operation = "+";
-                display.setText(format(oldValue));
-                textDisplay = "";
-                doAnother = false;
+                if(!(textDisplay == "") && !(textDisplay.equals("."))) {
+                    calculate();
+                    operation = "+";
+                    display.setText(format(oldValue));
+                    textDisplay = "";
+                    doAnother = false;
+                }else{
+                    Log.v("DTB", "GOT HERE");
+                }
             }
         });
 
         subt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
-                operation = "-";
-                display.setText(format(oldValue));
-                textDisplay = "";
-                doAnother = false;
+                if(!(textDisplay == "") && !(textDisplay.equals("."))) {
+                    calculate();
+                    operation = "-";
+                    display.setText(format(oldValue));
+                    textDisplay = "";
+                    doAnother = false;
+                }
             }
         });
 
         mult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
-                operation = "m";
-                display.setText(format(oldValue));
-                textDisplay = "";
-                doAnother = false;
+                if(!(textDisplay == "") && !(textDisplay.equals("."))) {
+                    calculate();
+                    operation = "m";
+                    display.setText(format(oldValue));
+                    textDisplay = "";
+                    doAnother = false;
+                }
             }
         });
 
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
-                operation = "d";
-                display.setText(format(oldValue));
-                textDisplay = "";
-                doAnother = false;
+                if(!(textDisplay == "") && !(textDisplay.equals("."))) {
+                    calculate();
+                    operation = "d";
+                    display.setText(format(oldValue));
+                    textDisplay = "";
+                    doAnother = false;
+                }
             }
         });
 
         pow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
-                operation = "p";
-                display.setText(format(oldValue));
-                textDisplay = "";
-                doAnother = false;
+                if(!(textDisplay == "") && !(textDisplay.equals("."))) {
+                    calculate();
+                    operation = "p";
+                    display.setText(format(oldValue));
+                    textDisplay = "";
+                    doAnother = false;
+                }
             }
         });
 
@@ -249,11 +261,13 @@ public class MainActivity extends AppCompatActivity {
         equals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
-                display.setText(format(oldValue));
-                textDisplay = format(oldValue);
-                operation = "";
-                doAnother = false;
+                if(!(textDisplay == "") && !(textDisplay.equals("."))) {
+                    calculate();
+                    display.setText(format(oldValue));
+                    textDisplay = format(oldValue);
+                    operation = "";
+                    doAnother = false;
+                }
             }
         });
 
@@ -261,16 +275,20 @@ public class MainActivity extends AppCompatActivity {
         neg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //is more like the number buttons
+                if (!(textDisplay == "") && !(textDisplay.equals("."))) {
 
-                //check if it is positive or negative
-                if(textDisplay.charAt(0) == '-'){
-                    textDisplay = textDisplay.substring(1);
-                }else {
-                    textDisplay = "-" + textDisplay;
+
+                    //is more like the number buttons
+
+                    //check if it is positive or negative
+                    if (textDisplay.charAt(0) == '-') {
+                        textDisplay = textDisplay.substring(1);
+                    } else {
+                        textDisplay = "-" + textDisplay;
+                    }
+                    display.setText(textDisplay);
+                    doAnother = true;
                 }
-                display.setText(textDisplay);
-                doAnother = true;
             }
         });
     }
